@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#132f2b"><meta name="description" content="Make room for your future. Private personal finance planning with clear practical advice, savings goals, expenses and future projections. English, Arabic, French and German.">
+<meta name="application-name" content="My Budget">
+<link rel="manifest" href="./manifest.webmanifest"><title>My Budget — Make room for your future</title>
+<link rel="icon" href="./icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="./style.css"></head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="app-shell">
+<aside class="sidebar">
+<a class="brand" href="#overview"><svg class="brand-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="38" height="40" role="img" aria-label="My Budget"><rect width="64" height="64" rx="15" fill="#294c3d"/><path d="M16 43V28q0-11 9-11t9 11v15m0-15q0-11 8-11t8 11v15" fill="none" stroke="#d6f3a8" stroke-width="6" stroke-linecap="round"/></svg><span>My Budget<small data-t="brandSub">A little clarity. A bigger future.</small></span></a>
+<div class="nav-label" data-t="workspace">YOUR WORKSPACE</div>
+<nav id="navigation" aria-label="Main navigation"></nav><details class="mobile-menu" id="mobile-menu"><summary id="mobile-menu-label">☰ Menu</summary><nav id="mobile-links" aria-label="Mobile navigation"></nav></details>
+<div class="sidebar-note"><span class="shield">◇</span><strong data-t="privateTitle">Your numbers. Your space.</strong><p data-t="privateNote">Saved in this browser. No bank connection. No account needed.</p><a href="#settings" data-t="manageData">Manage my data →</a></div>
+<div class="sidebar-footer"><a href="#guide" data-t="guideLink">Budgeting guide</a><a href="#privacy" data-t="privacy">Privacy & terms</a><small>© <span id="year"></span> My Budget · V5</small></div>
+</aside>
+<div class="main-shell">
+<header class="topbar"><span class="breadcrumb">My Budget <span>/</span> <b id="section-label"></b></span><div class="top-actions"><span id="save-state" class="save-state"></span><label class="sr-only" for="language" data-t="language">Language</label><select id="language"><option value="en">English</option><option value="ar">العربية</option><option value="fr">Français</option><option value="de">Deutsch</option></select><button id="theme-toggle" class="icon-button" aria-label="Toggle color theme">☾</button></div></header>
+<main id="main" tabindex="-1"><section class="static-boot"><h1>My Budget</h1><p>Loading your financial dashboard… / جارٍ فتح لوحة الميزانية…</p></section></main>
+<footer class="bottom-note" data-t="footerNote">A plan, not a promise. Your projections are only as accurate as your inputs.</footer>
+</div>
+</div>
+<dialog id="editor"><form id="editor-form"><div class="dialog-top"><h2 id="dialog-title"></h2><button type="button" class="icon-button" id="close-dialog" aria-label="Close">×</button></div><div id="editor-fields"></div><div class="dialog-actions"><button type="button" class="button secondary" id="cancel-dialog" data-t="cancel">Cancel</button><button class="button primary" type="submit" data-t="save">Save</button></div></form></dialog>
+<div id="toast" role="status" aria-live="polite"></div>
+<input id="import-file" type="file" accept="application/json,.json" hidden>
+<noscript><p>This budget planner needs JavaScript for its calculations. Your information stays in your browser. Read our <a href="#guide">budgeting guide</a>.</p></noscript>
+<script src="./app.js"></script>
+</body></html>
