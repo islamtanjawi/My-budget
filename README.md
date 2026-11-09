@@ -1,27 +1,25 @@
-# My Budget — GitHub Pages complete release (V5)
+# My Budget V6 — Complete GitHub Pages Website
 
-This archive contains **the complete website**, with individual files at the root (no enclosing project folder). Based on the tested V5 version. It preserves: budgeting, transactions, goals, future projections, subscriptions, debts, insights and emergency fund, annual planning and tax-document checklist, practical financial guidance, local browser storage, JSON import/export, dark mode, and Arabic/English/French/German.
+This is the FULL replacement for the prior V5 site. The ZIP stores all website files **at the ZIP root, with no wrapper directory**.
 
-## Publish with GitHub Desktop
-1. Extract the ZIP. Do **not** copy the ZIP file into the repository.
-2. In GitHub Desktop, open your `My-budget` repository: Repository > Show in Explorer.
-3. Copy **every file** from the extracted folder into the repository root, including `index.html`, `style.css`, and `app.js`. Do not copy the parent folder. (Windows may hide `.nojekyll`; it is optional for basic functionality.)
-4. Commit to main and Push origin.
-5. GitHub web: Settings > Pages > Deploy from a branch > main > /(root), Save.
-6. Visit `https://islamtanjawi.github.io/My-budget/` after Pages deployment completes. Hard-refresh after deployment if necessary.
+## Features
+- Four-language personal budget: Arabic, English, French, German.
+- Edit / Delete buttons clearly visible next to every income source and expense.
+- Monthly income and expense tracking, spending insights, goals, future forecasts, subscriptions, debt tracking, tax document checklist, backups and dark mode.
+- Loan/instalment/cash purchase simulator: adjustable price, down payment, APR, months, fees, recurring upkeep, income decrease and expense increase. Illustrative amortization, monthly budget changes and 12-month cash trajectory. Simulations do NOT create a real loan or change the entered budget.
+- Emergency fund: save a dedicated reserve balance and monthly contribution, estimate target, coverage, shortfall and the time needed to build it.
+- Merchant area: record dated sales, merchandise purchases, estimated cost of goods sold, other shop costs and cash withdrawn for home. View daily, weekly and monthly figures plus family/shop comparison. Export merchant CSV.
+- Data saved in the local browser. JSON backup/import and CSV export. No financial credentials or bank access.
 
-## File manifest
-- `index.html`: site HTML and shell.
-- `style.css`: **all layout, visual design, and mobile styles**. Without it, the site looks like plain text.
-- `app.js`: **all calculations, navigation, UI, languages, and local data**. Without it, the dashboard does not function.
-- `icon.svg`: website favicon.
-- `manifest.webmanifest`: installable app metadata.
-- `robots.txt`: search crawler directive.
-- `.nojekyll`: prevents Jekyll interference on GitHub Pages.
-- `README.md`: this deployment guide; not loaded by the site.
+## Publish on GitHub Desktop
+1. Export a JSON backup from the old site Settings if you already use it.
+2. Extract this ZIP; it contains `index.html`, `style.css`, `app.js`, `icon.svg`, `manifest.webmanifest`, `robots.txt`, `.nojekyll` and `README.md`.
+3. In GitHub Desktop select Repository > Show in Explorer (or Finder). Copy **every extracted file directly into the repository root**, replacing older files. Do not copy the ZIP itself and do not copy an enclosing folder.
+4. Commit to main and Push origin. In the GitHub repository, configure Settings > Pages > Deploy from branch > main > /(root).
+5. Open `https://islamtanjawi.github.io/My-budget/` after deployment and hard-refresh if it appears cached.
 
-## Data and privacy
-Data is saved in your browser's local storage. GitHub does not receive the users' budget data. Before replacing any existing site, use the in-app JSON export to back up important local entries. This site does not submit tax returns, connect to banks, or guarantee returns on projected savings/investments.
-
-## Known considerations
-On first use, an internet connection is required to load the site. A previous GitHub Pages release may have cached assets; hard-refresh and clear site cache if old content persists. Do not paste the GitHub Pages URL into a file: the relative `./` links work under the project subpath.
+## Important modeling limitations
+- These estimates are not bank quotes, a full accounting system, tax advice or investment advice. Borrowing interest is calculated using a standard fixed-monthly-rate formula (annual nominal interest / 12); insurance and bank-specific terms can differ.
+- Merchant revenue is **not** profit. Gross profit here uses a manually entered cost of goods sold, while cashflow subtracts stock purchase outflows; this is a planning model and does not automatically maintain inventory lots or tax payable.
+- Emergency money is earmarked in the app; it is not actually transferred between bank accounts.
+- Changing the display currency does not perform live FX conversion.

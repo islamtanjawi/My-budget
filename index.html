@@ -2,11 +2,11 @@
 <html lang="en" dir="ltr">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#132f2b"><meta name="description" content="Make room for your future. Private personal finance planning with clear practical advice, savings goals, expenses and future projections. English, Arabic, French and German.">
+<meta name="theme-color" content="#132f2b"><meta name="description" content="My Budget: personal and merchant finance, loan and installment simulations, emergency savings, spending analytics and future planning in four languages.">
 <meta name="application-name" content="My Budget">
 <link rel="manifest" href="./manifest.webmanifest"><title>My Budget — Make room for your future</title>
 <link rel="icon" href="./icon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="./style.css"></head>
+<link rel="stylesheet" href="./style.css?v=6"></head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <div class="app-shell">
@@ -15,7 +15,7 @@
 <div class="nav-label" data-t="workspace">YOUR WORKSPACE</div>
 <nav id="navigation" aria-label="Main navigation"></nav><details class="mobile-menu" id="mobile-menu"><summary id="mobile-menu-label">☰ Menu</summary><nav id="mobile-links" aria-label="Mobile navigation"></nav></details>
 <div class="sidebar-note"><span class="shield">◇</span><strong data-t="privateTitle">Your numbers. Your space.</strong><p data-t="privateNote">Saved in this browser. No bank connection. No account needed.</p><a href="#settings" data-t="manageData">Manage my data →</a></div>
-<div class="sidebar-footer"><a href="#guide" data-t="guideLink">Budgeting guide</a><a href="#privacy" data-t="privacy">Privacy & terms</a><small>© <span id="year"></span> My Budget · V5</small></div>
+<div class="sidebar-footer"><a href="#guide" data-t="guideLink">Budgeting guide</a><a href="#privacy" data-t="privacy">Privacy & terms</a><small>© <span id="year"></span> My Budget · V6</small></div>
 </aside>
 <div class="main-shell">
 <header class="topbar"><span class="breadcrumb">My Budget <span>/</span> <b id="section-label"></b></span><div class="top-actions"><span id="save-state" class="save-state"></span><label class="sr-only" for="language" data-t="language">Language</label><select id="language"><option value="en">English</option><option value="ar">العربية</option><option value="fr">Français</option><option value="de">Deutsch</option></select><button id="theme-toggle" class="icon-button" aria-label="Toggle color theme">☾</button></div></header>
@@ -24,8 +24,9 @@
 </div>
 </div>
 <dialog id="editor"><form id="editor-form"><div class="dialog-top"><h2 id="dialog-title"></h2><button type="button" class="icon-button" id="close-dialog" aria-label="Close">×</button></div><div id="editor-fields"></div><div class="dialog-actions"><button type="button" class="button secondary" id="cancel-dialog" data-t="cancel">Cancel</button><button class="button primary" type="submit" data-t="save">Save</button></div></form></dialog>
+<dialog id="business-dialog"><form id="business-form"><input type="hidden" id="business-edit-id"><div class="dialog-top"><h2 id="business-title"></h2><button type="button" class="icon-button" id="business-close" aria-label="Close">×</button></div><div class="form-grid two"><label class="field"><span data-v6-label="businessDate">Date</span><input type="date" name="date" required min="1900-01-01" max="2200-12-31"></label><label class="field"><span data-v6-label="businessKind">Type</span><select name="kind"><option value="sale">Sale</option><option value="purchase">Stock purchase</option><option value="expense">Business expense</option><option value="draw">Money taken home</option></select></label></div><label class="field"><span data-v6-label="businessName">Description</span><input type="text" name="name" required maxlength="160" autocomplete="off"></label><label class="field"><span data-v6-label="businessAmount">Amount</span><input type="number" name="amount" min="0" max="1000000000000" step="any" required></label><label class="field" id="business-cogs-wrap"><span data-v6-label="businessCOGS">Cost of goods sold</span><input type="number" name="cogs" min="0" max="1000000000000" step="any" required><small data-v6-label="businessCOGSHint"></small></label><div class="dialog-actions"><button type="button" class="button secondary" id="business-cancel">Cancel</button><button class="button primary" type="submit" data-v6-label="save">Save</button></div></form></dialog>
 <div id="toast" role="status" aria-live="polite"></div>
 <input id="import-file" type="file" accept="application/json,.json" hidden>
 <noscript><p>This budget planner needs JavaScript for its calculations. Your information stays in your browser. Read our <a href="#guide">budgeting guide</a>.</p></noscript>
-<script src="./app.js"></script>
+<script src="./app.js?v=6"></script>
 </body></html>
