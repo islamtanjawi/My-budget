@@ -1,0 +1,5 @@
+import {messages} from './i18n.js';
+const select=document.querySelector('#page-language');
+let lang='en';try{const saved=JSON.parse(localStorage.getItem('my-budget-v1'));lang=saved?.lang??navigator.language.slice(0,2);if(saved?.theme==='dark')document.documentElement.dataset.theme='dark';}catch{}
+function show(value){lang=messages[value]?value:'en';select.value=lang;document.documentElement.lang=lang;document.documentElement.dir=lang==='ar'?'rtl':'ltr';document.querySelectorAll('[data-content-language]').forEach(el=>el.hidden=el.dataset.contentLanguage!==lang);document.querySelector('#back-link').textContent=({en:'Open planner →',ar:'افتح المخطط ←',fr:'Ouvrir le planificateur →',de:'Planer öffnen →'})[lang];document.querySelector('#guide-link').textContent=messages[lang].guideLink;document.querySelector('#privacy-link').textContent=messages[lang].privacy;document.title=document.querySelector(`[data-content-language="${lang}"] h1`).textContent+' · My Budget';}
+select.addEventListener('change',e=>show(e.target.value));show(lang);

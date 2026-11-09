@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://islamtanjawi.github.io/My-budget/sitemap.xml
